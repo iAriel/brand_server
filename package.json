@@ -1,0 +1,29 @@
+{
+  "name": "brand",
+  "version": "1.0.0",
+  "description": "A API da bandeira de cartão de crédito intermediará a comunicação entre a operadora e o banco emissor.",
+  "main": "server.js",
+  "authors": [
+    "Ariel Sales de Oliveira Sobreira",
+    "Matheus Maximiano de Melo Vieira"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.5",
+    "sucrase": "^3.14.0"
+  }
+}
