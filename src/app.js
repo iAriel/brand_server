@@ -15,7 +15,7 @@ class App {
   }
 
   routes() {
-    this.server.use('/v1', routes);
+    this.server.use('/ws-brands/v1', routes);
   }
 }
 

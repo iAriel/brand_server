@@ -1,17 +1,15 @@
 import { Router } from 'express';
 
+import limitInstallmentsController from './app/controllers/limitInstallmentsController';
+import recivePaymentDetailsController from './app/controllers/recivePaymentDetailsController';
+
 const routes = new Router();
 
-routes.get('/', (req, res) => {
-  return res.status(200).json({
-    name: 'Brand',
-    Version: '1.0.0',
-    description:
-      'A API da bandeira de cartão de crédito intermediará a comunicação entre a operadora e o banco emissor.',
-  });
-});
+routes.get('/installments-limit/:brand', limitInstallmentsController.show);
 
-routes.get('/ws-brand/v1/status', (req, res) => {
+routes.post('/pay/:brand', recivePaymentDetailsController.store);
+
+routes.get('/v1/status', (req, res) => {
   return res.status(200).json({ status: 'Serviço disponível WS2' });
 });
 
