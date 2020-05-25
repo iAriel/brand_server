@@ -1,13 +1,13 @@
 import { Router } from 'express';
 
-import limitInstallmentsController from './app/controllers/limitInstallmentsController';
-import recivePaymentDetailsController from './app/controllers/recivePaymentDetailsController';
+import LimitInstallmentsController from './app/controllers/LimitInstallmentsController';
+import RecivePaymentDetailsController from './app/controllers/RecivePaymentDetailsController';
 
 const routes = new Router();
 
-routes.get('/installments-limit/:brand', limitInstallmentsController.show);
+routes.get('/installments-limit/:brand', LimitInstallmentsController.show);
 
-routes.post('/pay/:brand', recivePaymentDetailsController.store);
+routes.post('/pay/:brand', RecivePaymentDetailsController.store);
 
 routes.get('/v1/status', (req, res) => {
   return res.status(200).json({ status: 'Serviço disponível WS2' });

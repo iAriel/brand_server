@@ -1,6 +1,6 @@
 import { flags } from '../../databases';
 
-class limitInstallments {
+class LimitInstallmentsController {
   show(req, res) {
     const { brand } = req.params;
     const result = flags.find((flag) => flag.Bandeira === brand) || {};
@@ -19,4 +19,4 @@ class limitInstallments {
   }
 }
 
-export default new limitInstallments();
+export default new LimitInstallmentsController();

@@ -1,6 +1,6 @@
 import { flags } from '../../databases';
 
-class recivePaymentDetails {
+class RecivePaymentDetailsController {
   store(req, res) {
     const {
       numero_cartão,
@@ -14,4 +14,4 @@ class recivePaymentDetails {
   }
 }
 
-export default new recivePaymentDetails();
+export default new RecivePaymentDetailsController();
