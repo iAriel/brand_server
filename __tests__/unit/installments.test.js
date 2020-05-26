@@ -35,4 +35,15 @@ describe('Card Data', () => {
     );
     expect(flags[selectedFlag].Bandeira).toBe(response.body.Bandeira);
   });
+
+  it('should to return a error when are passed a invalid brand', async () => {
+    const response = await request(app).get(
+      '/ws-brands/v1/installments-limit/ddd'
+    );
+
+    expect({
+      resposta: 'erro',
+      detalhes: 'A bandeira informada não existe',
+    }).toEqual(response.body);
+  });
 });
