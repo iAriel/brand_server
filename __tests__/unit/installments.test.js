@@ -19,7 +19,7 @@ describe('Card Data', () => {
     expect(flags[1].Operadores).toEqual(response.body.Operadores_permitidos);
   });
 
-  it('Should to return the brand code valid with a velid brand', async () => {
+  it('Should to return the brand code valid with a valid brand', async () => {
     const response = await request(app).get(
       '/ws-brands/v1/installments-limit/vista'
     );
