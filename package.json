@@ -10,25 +10,35 @@
   "license": "MIT",
   "scripts": {
     "start": "node ./src/server.js",
-    "dev": "nodemon ./src/server.js"
+    "dev": "nodemon ./src/server.js",
+    "test": "jest"
   },
   "private": false,
   "apidoc": {
     "url": "http://localhost:3333/ws-brands/v1",
     "title": "Documentação da API de Bandeiras"
   },
+  "jest": {
+    "transform": {
+      ".(js|jsx|ts|tsx)": "@sucrase/jest-plugin"
+    }
+  },
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@sucrase/jest-plugin": "^2.0.0",
+    "@types/jest": "^25.2.3",
     "apidoc": "^0.22.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-prettier": "^3.1.3",
+    "jest": "^26.0.1",
     "nodemon": "^2.0.3",
     "prettier": "^2.0.5",
-    "sucrase": "^3.14.0"
+    "sucrase": "^3.14.0",
+    "supertest": "^4.0.2"
   }
 }
